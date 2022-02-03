@@ -1,0 +1,227 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --dark-color: #510CF5;
+    --medium-color: #D62FF6;
+    --light-color: #F6C845;
+    --darkest-color: #010101;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    flex: 0;
+    display: flex;
+    background-color: var(--darkest-color);
+    font-family: Lobster;
+    font-size: 24px;
+    padding: .5em 0 .5em 3em;
+    color: var(--light-color);
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #C4C4C4;
+    font-family: Roboto;
+}
+
+.calculatorFrame {
+    border: 6px solid;
+    border-color: #777 black black #777;
+    border-radius: 2.5em;
+    display: grid;
+    grid-template-areas:
+      "display display display display"
+      "clearAll clear plusMinus division"
+      "seven eight nine multiplication"
+      "four five six subtraction"
+      "one two three addition"
+      "zero zero decimal equals";
+    column-gap: 1em;
+    row-gap: 1em;
+    padding: 2em;
+    background: linear-gradient(to bottom right, var(--dark-color), var(--medium-color), var(--light-color));
+    box-shadow: 0 6px #000, 5px 10px 5px rgba(0,0,0,.4);
+    height: 100%;
+    width: auto;
+}
+
+button {
+    padding: .25em .5em;;
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3em;
+    border-radius: .5em;
+    cursor: pointer;
+    box-shadow: 0 2px #000;
+}
+
+.option {
+    background-color: var(--darkest-color);
+    color: var(--light-color);
+}
+
+.display {
+    grid-area: display;
+    justify-self: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .25rem;
+    align-items: flex-end;
+    background-color: var(--darkest-color);
+    border-radius: 1em;
+    height: 100px;
+    color: white;
+    padding-right: 1em;
+
+}
+
+#previousSelection {
+    font-size: 1rem;
+    height: 1rem;
+}
+
+#currentSelection {
+    height: 2rem;
+    font-size: 2rem;
+}
+
+.display p {
+    align-self: center;
+}
+
+.clearAll {
+    grid-area: clearAll;
+}
+
+.clear {
+    grid-area: clear;
+}
+
+.plusMinus {
+    grid-area: plusMinus;
+}
+
+.percent {
+    grid-area: percent;
+    padding-top: .25em;
+}
+
+/*
+.operation {
+    background-color: #D2D2D2;
+    color: var(--dark-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: .5em;
+    border: 4px solid var(--darkest-color);
+    box-sizing: border-box;
+}
+*/
+.division {
+    grid-area: division;
+}
+
+.digit {
+    background-color: var(--darkest-color);
+    color: var(--medium-color);
+}
+
+.seven {
+    grid-area: seven;
+}
+
+.eight {
+    grid-area: eight;
+}
+
+.nine {
+    grid-area: nine;
+}
+
+.multiplication {
+    grid-area: multiplication;
+}
+
+.four {
+    grid-area: four;
+}
+
+.five {
+    grid-area: five;
+}
+
+.six {
+    grid-area: six;
+}
+
+.subtraction {
+    grid-area: subtraction;
+}
+
+.one {
+    grid-area: one;
+}
+
+.two {
+    grid-area: two;
+}
+
+.three {
+    grid-area: three;
+}
+
+.addition {
+    grid-area: addition;
+}
+
+.zero {
+    grid-area: zero;
+    background-color: var(--darkest-color);
+    color: var(--medium-color);
+    justify-content: left;
+    padding-left: 1.15em;
+    width: 100%;
+}
+
+.decimal {
+    grid-area: decimal;
+    background-color: var(--darkest-color);
+    color: var(--medium-color);
+}
+
+.equals {
+    grid-area: equals;
+}
+
+.operation {
+    background-color: #D2D2D2;
+    color: var(--darkest-color);
+}
+
+footer {
+    flex: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--darkest-color);
+    font-family: Lobster;
+    font-size: 24px;
+    color: var(--light-color);
+    padding: .5em 0;
+    color: var(--light-color);
+}
